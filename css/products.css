@@ -1,0 +1,84 @@
+/* ================= All-Breads page only ================ */
+
+.product-grid{
+    display:grid;
+    grid-template-columns:repeat(4,minmax(200px,1fr)); /* PC 4列 */
+    gap:20px;
+    list-style:none;
+    margin:40px 0;
+    padding:0;
+  }
+  
+  @media (max-width:1024px){
+    .product-grid{
+      grid-template-columns:repeat(3,minmax(200px,1fr));
+    }
+  }
+  
+  /* スマホ含め 768px 以下は 2 列固定 */
+  @media (max-width:768px){
+    .product-grid{
+      grid-template-columns:repeat(2,minmax(160px,1fr)); /* ←幅も少し縮める */
+    }
+  }
+
+  
+  /* --- Card --- */
+  .product-card{
+    background:#fff;
+    border-radius:16px;
+    box-shadow:0 4px 10px rgba(0,0,0,.06);
+    overflow:hidden;
+    display:flex;
+    flex-direction:column;
+    transition:transform .2s;
+  }
+  .product-card:hover{transform:translateY(-4px);}
+
+  .product-content {
+    cursor: pointer;
+    flex: 1;
+  }
+
+  .product-card img{
+    width:100%;
+    height:140px;
+    aspect-ratio:1/1;
+    object-fit:cover;
+    border-bottom:1px solid #f2e9e1;
+  }
+
+  .product-card .info{padding:16px;flex:1;}
+  .product-card h2{font-size:1rem;margin:0 0 6px;}
+  .price{font-weight:700;margin-bottom:16px;}
+  
+  .reserve-btn{
+    display: block;
+    background:#f4a261;
+    color:#fff;
+    text-align: center;
+    text-decoration: none;
+    border:none;
+    padding:10px 16px;
+    border-radius:8px;
+    font-size:.95rem;
+    cursor:pointer;
+    transition:opacity .3s;
+    margin: 0 16px 16px;
+  }
+  .reserve-btn:hover{opacity:.8;}
+  
+  /* --- Toolbar --- */
+  .toolbar{
+    display:flex;
+    gap:12px;
+    margin-top:20px;
+  }
+  .toolbar input,
+  .toolbar select{
+    flex:1;
+    padding:10px 12px;
+    border:1px solid #e0d4c0;
+    border-radius:8px;
+    font-size:.9rem;
+  }
