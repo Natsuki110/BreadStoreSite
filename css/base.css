@@ -1,0 +1,354 @@
+ /* 基本スタイル */
+body {
+    font-family: "Yu Gothic", "Noto Sans JP", sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #fff8f0;
+    color: #4b2e2e;
+  }
+  
+  .site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;  
+    padding: 10px 20px;
+    background: #ffe8cc;
+  }
+  
+  .header-left,
+  .header-right {
+    width: 60px; 
+    text-align: center;
+  }
+  
+  .header-center {
+    flex-grow: 1;
+    text-align: center;
+  }
+  
+  .logo {
+    font-size: 1.4em;
+    font-weight: bold;
+    color: #4b2e2e;
+    text-decoration: none;  
+  }
+  
+  .menu-icon {
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+    vertical-align: middle; 
+  }
+  
+  .cart-icon {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .cart-icon img {
+    width: 28px;
+    height: 28px;
+    vertical-align: middle; 
+  }
+  
+  .cart-count {
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    background: #b76e51; 
+    color: #fff;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    font-size: 0.8em;
+    text-align: center;
+    line-height: 18px;
+    font-weight: bold;
+  }
+  
+  
+  /* ハンバーガーメニュー */
+  nav {
+    background: #fff2e0;
+    padding: 20px;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  nav ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  nav li {
+    margin: 10px 0;
+  }
+  
+  .category-list {
+    margin-left: 20px;
+  }
+  
+  input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  /* スライダー（横スクロール） */
+  .slider {
+    position: relative;
+    overflow: hidden;
+    width: auto;
+    background: #fff2e0;
+  }
+  
+  .slider-wrapper {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: 100%;
+  }
+  
+  .slider-wrapper img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+  
+  .slider-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 42px;
+    color: white;
+    cursor: pointer;
+    padding: 0 10px;
+    z-index: 10;
+    transition: opacity 0.3s ease;
+    opacity: 0.8;
+  }
+  
+  .slider-arrow.left {
+    left: 10px;
+  }
+  
+  .slider-arrow.right {
+    right: 10px;
+  }
+  
+  .slider-arrow:hover {
+    opacity: 1;
+  }
+  
+  
+  /* スマホで横スワイプ */
+  /* .slider {
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+  }
+  
+  .slider-wrapper img {
+    scroll-snap-align: start;
+  } */
+  
+  /* ドットナビゲーション */
+  .slider-dots {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 6px;
+  }
+  
+  .slider-dots div {
+    width: 10px;
+    height: 10px;
+    background: #bbb;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .slider-dots .active {
+    background: #eeceb3;
+  }
+  
+  .section-container {
+    max-width: 960px;
+    margin: 0 auto;
+  }
+  
+  
+  /* 見出し（共通） */
+  .section-title {
+    text-align: center;
+    font-size: 1.4em;
+    position: relative;
+    margin: 40px auto 20px;
+    max-width: 100%;
+  }
+  
+  .section-title .line {
+    display: inline-block;
+    position: relative;
+    padding: 0 20px;
+  }
+  
+  .section-title .line::before,
+  .section-title .line::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 0;
+    height: 1px;
+    background: #ccc;
+    transition: width 0.8s ease;
+  }
+  
+  .section-title .line::before {
+    right: 100%;
+    margin-right: 15px;
+  }
+  
+  .section-title .line::after {
+    left: 100%;
+    margin-left: 15px;
+  }
+  
+  .section-title.active .line::before,
+  .section-title.active .line::after {
+    width: 120px;
+  }
+  
+  .ranking-grid {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 20px;
+    padding: 0 20px; 
+    text-align: center;
+  }
+  
+  .ranking-item {
+    position: relative;
+  }
+  
+  .ranking-item img {
+    width: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+  
+  .rank-number {
+    position: absolute;
+    top: -12px;
+    left: -12px;
+    background: #f4a261;
+    color: white;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    font-size: 0.9em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+  }
+  
+  .bread-name {
+    margin-top: 8px;
+    font-size: 0.95em;
+  }
+  
+  .price {
+    font-size: 0.9em;
+    color: #555;
+  }
+  
+  .btn-wrap {
+    text-align: right;
+    padding: 0 20px;
+  }
+  
+  .see-all-btn {
+    display: inline-block;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    padding: 8px 16px;
+    font-size: 0.95em;
+    color: #4b2e2e;
+    background: transparent;
+    text-decoration: none;
+    position: relative;
+    transition: all 0.3s ease;
+  }
+  
+  .see-all-btn::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background-color: #f4a261;
+    transform: scaleX(1);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+  }
+  
+  .see-all-btn:hover {
+    opacity: 0.7;
+  }
+  /* 最近チェックした商品 */
+  .recent-slider {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    overflow-x: auto;
+    padding: 0 10px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .recent-item {
+    min-width: 100px;
+    flex-shrink: 0;
+    text-align: center;
+    scroll-snap-align: start;
+  }
+  
+  .recent-item img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 6px;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 15px;
+    background: #ffe8cc;
+    margin-top: 30px;
+  }
+  
+  /* ===== 共通レイアウト：ページ余白 ===== */
+  .container{
+    max-width: 1200px;          
+    margin: 0 auto;             
+    padding: 0 32px;            
+  }
+  
+  /* スマホでキツい場合はメディアクエリで縮める */
+  @media (max-width: 480px){
+    .container{
+      padding: 0 16px;          
+    }
+  }
+  
