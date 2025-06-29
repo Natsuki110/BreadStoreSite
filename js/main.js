@@ -6,9 +6,9 @@ function toggleMenu() {
   
   // 最近チェックした商品（仮データ）
   const recentItems = [
-    { name: "バゲット", price: "470円", image: "images/all-breads/bugette.jpg" },
-    { name: "チーズバーガー", price: "380円", image: "images/all-breads/cheeseburger.jpg" },
-    { name: "シナモンロール", price: "694円", image: "images/all-breads/cinnamon-rolls.jpg" }
+    { name: "バゲット", price: "470円", image: "img/all-breads/bugette.jpg" },
+    { name: "チーズバーガー", price: "380円", image: "img/all-breads/cheeseburger.jpg" },
+    { name: "シナモンロール", price: "694円", image: "img/all-breads/cinnamon-rolls.jpg" }
   ];
   const recentContainer = document.getElementById("recentItems");
   recentItems.forEach(item => {
