@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>全商品 | おうちぱん工房</title>
+
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/products.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-left">
+      <img src="images/icon/hamburger.png" alt="メニュー" class="menu-icon" onclick="toggleMenu()">
+    </div>
+    <div class="header-center">
+      <a href="index.html" class="logo">おうちぱん工房</a>
+    </div>
+    <div class="header-right">
+      <a href="cart.html" class="cart-icon">
+        <img src="images/icon/cart.png" alt="カート" />
+        <span class="cart-count" id="cartCount">0</span>
+      </a>
+    </div>
+  </header>
+
+  <nav id="hamburgerMenu" class="hidden">
+    <ul>
+      <li><a href="#">新規会員登録</a></li>
+      <li><a href="#">ログイン</a></li>
+      <li>
+        <input type="text" placeholder="パンを検索..." />
+      </li>
+      <li>
+        カテゴリーから探す
+        <ul class="category-list">
+          <li><a href="#">お惣菜パン</a></li>
+          <li><a href="#">甘いパン</a></li>
+          <li><a href="#">ハード系</a></li>
+        </ul>
+      </li>
+      <li><a href="#">お問い合わせ</a></li>
+    </ul>
+  </nav>
+
+  <main class="container">
+    <h1 class="page-title">All Breads</h1>
+
+    <div class="toolbar">
+      <!-- <input type="search" id="searchBox" placeholder="キーワードで検索…" /> -->
+      <select id="sortSelect">
+        <option value="default">並び替え</option>
+        <option value="price-asc">価格が安い順</option>
+        <option value="price-desc">価格が高い順</option>
+      </select>
+    </div>
+
+    <!-- 商品グリッド -->
+    <ul id="productGrid" class="product-grid"></ul>
+
+    <!-- 最近チェックした商品 -->
+    <section class="recently-viewed section-container">
+      <h2 class="section-title">
+        <span class="line">最近チェックした商品</span>
+      </h2>
+      <div class="recent-slider" id="recentItems">
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    © 2025 おうちぱん工房
+  </footer>
+
+  <script src="js/main.js" defer></script>
+  <script src="js/products.js" defer></script>
+
+</body>
+</html>
